@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Css Cafe</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!--書籍と異なり、lower camelCaseでクラス名を付ける-->
+        <!--headerという、BEMでの header Blockができた-->
+        <header class="header">
+            <!--header BlogのタイトルElementである、headを作成する-->
+            <!--h1にclassを付けるのではなく、divを作成してh1を囲む-->
+            <div class="header__head">
+                <!--サイトのタイトル-->
+                <h1>Site Name</h1>
+            </div>
+
+            <!--ヘッダのナビゲーション-->
+            <!--ヘッダーのナビゲーションは、header BlockのElementとして用意する-->
+            <!--navにclassをつける-->
+            <nav class="header__body">
+                <!--リストをheader BlockのElementとして表現してしまうと、header Blockと切り離せない-->
+                <!--footer Blockというのが出てきてそこで再利用したいと考えても、再利用できない-->
+                <!--そこで、ul以下を新しいBlock(menu Block)として考えて、Blockの中のBlockとして表現する-->
+                <ul class="menu">
+                    <li>
+                        <!--スタイルを当てるのはa要素のため、a要素にclassを与える-->
+                        <a class="menu__item" href="#">Services</a>
+                    </li>
+                    <li><a class="menu__item" href="#">Work</a></li>
+                    <li><a class="menu__item" href="#">About us</a></li>
+                    <li><a class="menu__item" href="#">Blog</a></li>
+                    <li><a class="menu__item" href="#">Content</a></li>
+                </ul>
+            </nav>
+
+
+        </header>
+    </div>
+
+<script src="./dist/js/main.min.js"></script>
+<script>
+    imageSlide('Slide', 2);
+</script>
+</body>
+</html>

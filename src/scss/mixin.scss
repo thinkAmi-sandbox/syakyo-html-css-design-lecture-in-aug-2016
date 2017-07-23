@@ -1,0 +1,14 @@
+// mixinは定義しただけでは機能しない
+// このmixinを使用するという宣言が必要
+@mixin redText {
+  color: red;
+  font-size: 12px;
+}
+
+.text1 {
+  @include redText;
+}
+
+.text2 {
+  @include redText;
+}

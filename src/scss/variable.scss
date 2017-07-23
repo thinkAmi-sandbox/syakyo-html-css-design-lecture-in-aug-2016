@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/* 覚えづらい値などを、$を使って変数参照させる */
+$mainColor : #2576E5;
+
+header {
+  // 変数を使う
+  //background-color: #2576E5;
+  background-color: $mainColor;
+}
+
+.main {
+  p {
+    // こちらも変数を使うとどうなるか
+    //color: #2576E5;
+    color: $mainColor;
+  }
+}

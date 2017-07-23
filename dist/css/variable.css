@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* 覚えづらい値などを、$を使って変数参照させる */
+header {
+  background-color: #2576E5; }
+
+.main p {
+  color: #2576E5; }
+
+/*# sourceMappingURL=variable.css.map */
