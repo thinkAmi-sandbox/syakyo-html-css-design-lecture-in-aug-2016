@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex layout</title>
+
+    <style>
+        .flexContainer {
+            display: flex;
+            border: 1px solid;
+            height: 150px;
+        }
+        .flexRow {
+            flex-direction: row;
+        }
+        .flexRowWithWrap {
+            flex-wrap: wrap;
+        }
+        .flexColumn {
+            flex-direction: column;
+            height: auto;
+        }
+        .flexRowCenter {
+            flex-direction: row;
+            justify-content: center;
+        }
+        .flexColumnCenter {
+            flex-direction: column;
+            justify-content: center;
+            height: 400px;
+        }
+        .flexRowEquality {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .flexRowEqualityWithMargin {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .flexRowAline {
+            flex-direction: row;
+            align-items: center;
+        }
+        .flexMixinLeftRight {
+            justify-content: flex-end;
+        }
+        /* 左寄せと右寄せの混在 */
+        /* 最初の要素だけ左寄せ(margin-right:autoを使う) */
+        li:first-child {
+            margin-right: auto;
+        }
+        /* リストマーク(・)を非表示にする */
+        li {
+            list-style: none;
+        }
+
+        .flexItem {
+            width: 100px;
+            height: 100px;
+        }
+        .flexItemOdd {
+            background-color: lightblue;
+        }
+        .flexItemEven {
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>横並び</h1>
+        <!-- display:flex & flex-direction:row -->
+        <div class="flexContainer flexRow">
+            <div class="flexItem flexItemOdd">1</div>
+            <div class="flexItem flexItemEven">2</div>
+            <div class="flexItem flexItemOdd">3</div>
+            <div class="flexItem flexItemEven">4</div>
+            <div class="flexItem flexItemOdd">5</div>
+            <div class="flexItem flexItemEven">6</div>
+        </div>
+    </div>
+
+    <div>
+        <h1>横並びを折り返す</h1>
+        <!-- display:flex & flex-wrap:wrap -->
+        <div class="flexContainer flexRowWithWrap">
+            <div class="flexItem flexItemOdd">1</div>
+            <div class="flexItem flexItemEven">2</div>
+            <div class="flexItem flexItemOdd">3</div>
+            <div class="flexItem flexItemEven">4</div>
+            <div class="flexItem flexItemOdd">5</div>
+            <div class="flexItem flexItemEven">6</div>
+        </div>
+    </div>
+
+    <div>
+        <h1>縦並び</h1>
+        <!-- display:flex & flex-direction:column -->
+        <div class="flexContainer flexColumn">
+            <div class="flexItem flexItemOdd">1</div>
+            <div class="flexItem flexItemEven">2</div>
+            <div class="flexItem flexItemOdd">3</div>
+        </div>
+    </div>
+
+    <div>
+        <h1>横中央寄せ</h1>
+        <!-- display:flex & flex-direction:row & justify-content:center -->
+        <div class="flexContainer flexRowCenter">
+            <div class="flexItem flexItemOdd">1</div>
+            <div class="flexItem flexItemEven">2</div>
+            <div class="flexItem flexItemOdd">3</div>
+        </div>
+    </div>
+
+    <div>
+        <h1>縦中央寄せ</h1>
+        <!-- display:flex & flex-direction:column & justify-content:center -->
+        <div class="flexContainer flexColumnCenter">
+            <div class="flexItem flexItemOdd">1</div>
+            <div class="flexItem flexItemEven">2</div>
+            <div class="flexItem flexItemOdd">3</div>
+        </div>
+    </div>
+
+    <div>
+        <h1>横均等配置</h1>
+        <!-- display:flex & flex-direction:row & justify-content:space-between -->
+        <div class="flexContainer flexRowEquality">
+            <div class="flexItem flexItemOdd">1</div>
+            <div class="flexItem flexItemEven">2</div>
+            <div class="flexItem flexItemOdd">3</div>
+        </div>
+    </div>
+
+    <div>
+        <h1>横均等配置(余白あり)</h1>
+        <!-- display:flex & flex-direction:row & justify-content:space-around -->
+        <div class="flexContainer flexRowEqualityWithMargin">
+            <div class="flexItem flexItemOdd">1</div>
+            <div class="flexItem flexItemEven">2</div>
+            <div class="flexItem flexItemOdd">3</div>
+        </div>
+    </div>
+
+    <div>
+        <h1>横：垂直方向の中央寄せ</h1>
+        <!-- display:flex & flex-direction:row & align-items:center -->
+        <div class="flexContainer flexRowAline">
+            <div class="flexItem flexItemOdd">1</div>
+            <div class="flexItem flexItemEven">2</div>
+            <div class="flexItem flexItemOdd">3</div>
+        </div>
+    </div>
+
+    <div>
+        <h1>左寄せと右寄せの混在</h1>
+        <!-- display:flex & flex-direction:row & justify-content:flex-end -->
+        <ul class="flexContainer flexMixinLeftRight">
+            <li class="flexItem flexItemOdd">1</li>
+            <li class="flexItem flexItemEven">2</li>
+            <li class="flexItem flexItemOdd">3</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

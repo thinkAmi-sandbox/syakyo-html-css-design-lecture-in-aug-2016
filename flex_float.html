@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .prev_element {
+            background-color: blue;
+        }
+        .parent_element {
+            height: 100px;
+            background-color: bisque;
+        }
+        .float_left1 {
+            float: left;
+            background-color: green;
+            width: 300px;
+            height: 100px;
+        }
+        .float_left2 {
+            float: left;
+            background-color: red;
+            width: 300px;
+            height: 100px;
+        }
+        .flex_wrap {
+            display: flex;
+        }
+        .flex1 {
+            background-color: green;
+            width: 300px;
+            height: 100px;
+        }
+        .flex2 {
+            background-color: red;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Flex box</h1>
+        <div class="prev_element">前要素</div>
+        <div class="flex_wrap parent_element">
+            <div class="flex1">flex1</div>
+            <div class="flex2">flex2</div>
+        </div>
+    </div>
+    <div>
+        <h1>float</h1>
+        <div class="parent_element">
+            <div class="prev_element">前要素</div>
+            <div class="float_left1">float:left</div>
+            <div class="float_left2">float:left</div>
+        </div>
+    </div>
+</body>
+</html>
