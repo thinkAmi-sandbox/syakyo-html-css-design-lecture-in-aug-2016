@@ -1,0 +1,15 @@
+.button {
+  color: $color-reverse-line;
+  background-color: $color-reverse-fill;
+
+  // ボタンの領域を広くするため、paddingを使って幅を広げる
+  padding: 7px 12px;
+
+  // 位置や文字サイズを調整する
+  // 文字以外の部分でもクリックできるように、inline-blockにする
+  display: inline-block;
+  font-weight: normal;
+  font-size: 14px;
+  // 数値にフォントサイズを掛けた値が、行の高さとなる
+  line-height: 1;
+}

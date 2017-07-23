@@ -556,4 +556,33 @@ a:hover {
     padding-left: 15px;
     text-transform: uppercase; }
 
+.entryPanel {
+  display: flex;
+  align-items: center; }
+  .entryPanel__main {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    flex: 1 1 55%;
+    flex-direction: column;
+    padding: 20px 0; }
+  .entryPanel__head {
+    font-weight: bold;
+    font-size: 16px; }
+  .entryPanel__body {
+    margin-top: 10px;
+    font-size: 14px; }
+  .entryPanel__foot {
+    margin-top: 10px;
+    text-align: right; }
+
+.button {
+  color: #fff;
+  background-color: #252525;
+  padding: 7px 12px;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1; }
+
 /*# sourceMappingURL=main.css.map */
