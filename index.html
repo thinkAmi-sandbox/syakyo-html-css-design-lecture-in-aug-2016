@@ -36,9 +36,26 @@
                     <li><a class="menu__item" href="#">Content</a></li>
                 </ul>
             </nav>
-
-
         </header>
+
+        <div class="entryPanel">
+            <!--entryPanelのうち、画像がなくても成り立つ部分をentryPanelのmain Elementとして作成-->
+            <div class="entryPanel__main">
+                <!--entryPanel Blockの見出し部分なので、class属性には汎用的なElement名としてあげたheadを使用する-->
+                <!--画像がないパターンが存在しても、見出しは必須なためheadとした-->
+                <h3 class="entryPanel__head">冬のコーヒーギフト</h3>
+
+                <!--概要部分はbody-->
+                <div class="entryPanel__body">
+                    大切なあの方にありがとうを届けたい。心も体も温まる素敵なギフト。プレゼントキャンペーン実施中！
+                </div>
+
+                <!--read moreのようなフッタっぽい部分は、footとする-->
+                <div class="entryPanel__foot">
+                    <a href="#">READ MORE</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 <script src="./dist/js/main.min.js"></script>
