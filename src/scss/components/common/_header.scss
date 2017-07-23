@@ -1,3 +1,27 @@
 .header {
-  color: #000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  // ヘッダーに入ってくる要素はそれほど変動しないと予想されるので、
+  // デザインの再現性を優先して、高さは固定値にしている
+  height: 98px;
+
+  // Blockに従属するElementを作るため、 `&` を使う
+  // なお、ElementはFlexアイテムになる
+  &__head {
+    // flex-grow, flex-shrinkは単位なしで指定
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    // 上記のショートハンドは以下の記述になる
+    //flex: 1 1 auto;
+    text-align: center;
+  }
+
+  &__body {
+    flex-grow: 3;
+    flex-shrink: 1;
+    flex-basis: auto;
+    //flex: 3 1 auto;
+  }
 }

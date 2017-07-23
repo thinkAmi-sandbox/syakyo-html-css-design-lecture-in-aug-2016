@@ -8,8 +8,7 @@
 @import "./base/variables";
 // リセットCSS (sanitize.css)
 @import "./base/reset";
+// ヘッダ
 @import "./components/common/header";
-
-p {
-  color: red;
-}
+// メニュー
+@import "./components/common/menu";

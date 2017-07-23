@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    // 縦に積まれていたメニューが、等間隔で配置されるようにした
+    justify-content: space-around;
+
+    &__item {
+        display: block;
+
+        padding-top: 10px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        // 上記のショートハンド
+        // 上・右・下・左
+        //padding: 10px 15px 10px 15px;
+        // 上下・左右
+        //padding: 10px 15px;
+        // テキストをすべて大文字にする
+        text-transform: uppercase;
+    }
+}

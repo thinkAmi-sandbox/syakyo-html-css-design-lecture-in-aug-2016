@@ -531,9 +531,29 @@ a:hover {
   color: #878378; }
 
 .header {
-  color: #000; }
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 98px; }
+  .header__head {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    text-align: center; }
+  .header__body {
+    flex-grow: 3;
+    flex-shrink: 1;
+    flex-basis: auto; }
 
-p {
-  color: red; }
+.menu {
+  display: flex;
+  justify-content: space-around; }
+  .menu__item {
+    display: block;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
