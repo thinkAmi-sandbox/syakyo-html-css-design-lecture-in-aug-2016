@@ -39,6 +39,12 @@
         </header>
 
         <div class="entryPanel">
+            <!--画像部分がなくてもentryPanelとして成立するため、sub Elementとした-->
+            <div class="entryPanel__sub">
+                <!--画像にスタイリングが必要なので、img要素に直接 Element指定をした-->
+                <img class="entryPanel__thumb" src="./dist/images/top/entry1.jpg" alt="" width="275" height="250">
+            </div>
+
             <!--entryPanelのうち、画像がなくても成り立つ部分をentryPanelのmain Elementとして作成-->
             <div class="entryPanel__main">
                 <!--entryPanel Blockの見出し部分なので、class属性には汎用的なElement名としてあげたheadを使用する-->
