@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+// importするときは、ファイル名の先頭にある`_`と拡張子の記載は不要
+// reset.scssを読み込むことで、sanitize.scssを読み込むようにする
+// 変数を設定したCSS
+// 変数を使用する場所よりも前に、変数を定義しておく必要があるため、
+// variables.scssは一番最初に読み込んでおく
+@import "./base/variables";
+// リセットCSS (sanitize.css)
+@import "./base/reset";
+@import "./components/common/header";
+
 p {
   color: red;
 }
